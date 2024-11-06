@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "6c49fe61-1e37-46d4-89b5-9a3377a3d5d1",
+		"name": "Todo list api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11938940"
+	},
+	"item": [
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Create todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"asd\",\n    \"description\": \"asd\",\n    \"type\": \"\",\n    \"note_files\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/notes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/notes?page=3&limit=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get todo by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/d0543738-ffb4-4823-a2e3-10920317500e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"d0543738-ffb4-4823-a2e3-10920317500e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update todo by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"d0543738-ffb4-4823-a2e3-10920317500e\",\n    \"title\": \"halo\",\n    \"description\": \"halo\",\n    \"type\": \"parent\",\n    \"note_children\": [],\n    \"note_files\": [],\n    \"created_at\": \"2024-11-07T10:37:15.909277+07:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/d0543738-ffb4-4823-a2e3-10920317500e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"d0543738-ffb4-4823-a2e3-10920317500e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete todo by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"ba9ca9fb-14c2-4cb2-9c52-c97ef26c6153\",\n    \"title\": \"halo\",\n    \"description\": \"halo\",\n    \"type\": \"parent\",\n    \"note_children\": [],\n    \"note_files\": [],\n    \"created_at\": \"2024-11-07T10:37:15.909277+07:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/d0543738-ffb4-4823-a2e3-10920317500e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"d0543738-ffb4-4823-a2e3-10920317500e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo Child",
+			"item": [
+				{
+					"name": "Get todo children",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/children?page=1&limit=10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"children"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get todo child by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/children/a78891e2-849e-4ec0-879c-7c0b4322c4da",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"children",
+								"a78891e2-849e-4ec0-879c-7c0b4322c4da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update todo child by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"a78891e2-849e-4ec0-879c-7c0b4322c4da\",\n    \"note_id\": \"eeb1f424-1639-4440-b3fe-e40f7fcf9d1c\",\n    \"title\": \"test\",\n    \"description\": \"test\",\n    \"type\": \"\",\n    \"note_child_files\": null,\n    \"created_at\": \"2024-11-07T13:41:13.326895+07:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/children/a78891e2-849e-4ec0-879c-7c0b4322c4da",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"children",
+								"a78891e2-849e-4ec0-879c-7c0b4322c4da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create todo children",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"asd\",\n    \"note_id\": \"1563aa58-f69f-4e6a-92b8-a0a04eca4a80\",\n    \"description\": \"asd\",\n    \"type\": \"\",\n    \"note_files\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/children",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"children"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete todo children by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"asd\",\n    \"note_id\": \"d0543738-ffb4-4823-a2e3-10920317500e\",\n    \"description\": \"asd\",\n    \"type\": \"\",\n    \"note_files\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/notes/children/85681885-11fc-4f03-8213-9bc6b49fb7a2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"children",
+								"85681885-11fc-4f03-8213-9bc6b49fb7a2"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
